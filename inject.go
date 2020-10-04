@@ -62,9 +62,7 @@ func (cmd *injectCommand) Run(ctx context.Context, args []string) error {
 		}
 	}
 
-	subCmd.Run()
-
-	return nil
+	return subCmd.Run()
 }
 
 func findDoubleDashIndex(args []string) int {
