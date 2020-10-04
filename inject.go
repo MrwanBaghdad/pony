@@ -39,8 +39,9 @@ func (cmd *injectCommand) Run(ctx context.Context, args []string) error {
 
 	secretKeys := args[:argsDoubleDashIdx]
 
-	rootCmd := args[argsDoubleDashIdx+1]
-	cmdArgs := args[argsDoubleDashIdx+2:]
+	cmdString := strings.Join(args[argsDoubleDashIdx+1:], " ")
+	sourceRcCmd := "source ~/.zshrc"
+	subCmd := exec.Command("/bin/zsh", "-c", strings.Join([]string{sourceRcCmd, cmdString}, "&&"))
 
 	subCmd := exec.Command(rootCmd, cmdArgs...)
 
