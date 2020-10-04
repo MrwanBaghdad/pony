@@ -42,6 +42,7 @@ func main() {
 		&getCommand{},
 		&listCommand{},
 		&removeCommand{},
+		&injectCommand{},
 	}
 
 	// Setup the global flags.
