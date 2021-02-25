@@ -3,7 +3,7 @@ module github.com/jessfraz/pony
 go 1.14
 
 require (
-	github.com/atotto/clipboard v0.1.0
+	github.com/atotto/clipboard v0.1.4
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/genuinetools/pkg v0.0.0-20180717201740-54e648406b2d
 	github.com/onsi/gomega v1.4.2 // indirect
